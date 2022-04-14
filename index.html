@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Footyplay</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+           Footyplay
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        </label>
+        <!--Navbar links-->
+        <ul>
+           <li><a class="active" href="#">Home</a></li>
+           <li><a href="#">Random</a></li>
+        </ul>
+     </nav>
+
+    <h1>Football Highlights</h1>
+    <div class="flex-container">
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><h2>Log inn</h2></button>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><h2>Sign up</h2></button>
+    </div>
+
+    <!--SIGN INN MODAL-->
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="index.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+        <!--CONTAINER FOR LOG INN SLOTS-->
+        <div class="container">
+          <label for="username"><b>Username</b></label>
+          <input type="text" class="form-control" name="txtUsername" id="txtUsername" placeholder="Enter Username"  required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="textPassword" id="txtPassword" required>
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+    <!--SIGN UP MODAL-->
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
+

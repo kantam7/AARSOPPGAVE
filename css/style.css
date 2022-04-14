@@ -18,14 +18,21 @@ nav{
   background: black;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px 0 100px;
+  padding: 0 50px 0 15px;
   flex-wrap: wrap;
 }
-/*Navigationbar logo*/
-nav .logo{
+nav .logo img{
+    width: auto;
+    height: 60px;
+    margin-top: 10px;
+}
+/*Navigationbar Footyplay text*/
+nav .footyplay{
   color: white;
   font-size: 35px;
   font-weight: 600;
+  margin-left: -360px;
+  text-decoration: none;
 }
 /*Navigationbar links*/
 nav ul{
@@ -312,20 +319,8 @@ background-color: rgb(4, 185, 4);
     padding: 0 15px;
 }
 
-/* #################   HOMEPAGE STYLING   ################# */
+/* #################  LOGGEDIN HOMEPAGE STYLING   ################# */
 /*Profile and Logout buttons*/
-.navtop div a {
-	padding: 0 20px;
-	text-decoration: none;
-	color: #c1c4c8;
-	font-weight: bold;
-}
-.navtop div a i {
-	padding: 2px 8px 0 0;
-}
-.navtop div a:hover {
-	color: #eaebed;
-}
 body.homepage {
 	background-color: #f3f4f7;
 }
@@ -358,4 +353,51 @@ body.homepage {
 .homepage-content > div p {
 	padding: 5px;
 	margin: 0 0 10px 0;
+}
+
+.homepage nav ul li a.active,
+.homepage nav ul li a:hover{
+  color: white;
+  background: none;
+}
+
+/* #################  PROFILE PAGE STYLING   ################# */
+body.profile {
+	background-color: #f3f4f7;
+}
+
+.profile-content {
+	width: 1000px;
+	margin: 0 auto;
+}
+.profile-content h2 {
+	margin: 0;
+	padding: 25px 0;
+	font-size: 22px;
+	border-bottom: 1px solid #e0e0e3;
+	color: #4a536e;
+}
+.profile-content > p, .profile-content > div {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 25px;
+	background-color: #fff;
+}
+.profile-content > p table td, .profile-content > div table td {
+	padding: 5px;
+}
+.profile-content > p table td:first-child, .profile-content > div table td:first-child {
+	font-weight: bold;
+	color: #4a536e;
+	padding-right: 15px;
+}
+.profile-content > div p {
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+
+.profile nav ul li a.active,
+.profile nav ul li a:hover{
+  color: white;
+  background: none;
 }

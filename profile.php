@@ -29,18 +29,21 @@ $stmt->close();
 	<head>
 		<meta charset="utf-8">
 		<title>Profile Page</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
-	<body class="loggedin">
-		<nav class="navtop">
-			<div>
-				<h1>Website Title</h1>
-				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-			</div>
+	<body class="profile">
+		<nav>
+		<label class="logo"><a href="index.html"><img src="logo/football-logo.png" alt="#"></a></label>
+			<div class="logo">Footyplay</div>
+    		<input type="checkbox" id="click">
+    		<label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
+			<ul>
+				<li><a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a></li>
+				<li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+			</ul>
 		</nav>
-		<div class="content">
+		<div class="profile-content">
 			<h2>Profile Page</h2>
 			<div>
 				<p>Your account details are below:</p>

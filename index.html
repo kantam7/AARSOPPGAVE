@@ -8,68 +8,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>Footyplay</title>
 </head>
-<body>
-    <nav>
-        <div class="logo">
-           Footyplay
-        </div>
-        <!--Navbar links-->
-        <ul>
-           <li><a class="active" href="#">Home</a></li>
-           <li><a href="#">Random</a></li>
-        </ul>
-     </nav>
+<body class="frontpage">
+  <nav>
+    <label class="logo"><a href="index.html"><img src="logo/football-logo.png" alt="#"></a></label>
+    <div class="footyplay">Footyplay</div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <!--Navbar links-->
+    <ul>
+       <li><a class="active" href="#">Home</a></li>
+       <li><a href="#">Random</a></li>
+    </ul>
+ </nav>
+  <div class="flex-container">
+      <button type="button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><h2>Log in</h2></button>
+      <button type="button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><h2>Sign up</h2></button>
+  </div>
 
-    <h1>Football Highlights</h1>
-    <div class="flex-container">
-        <button type="button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><h2>Log in</h2></button>
-        <button type="button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><h2>Sign up</h2></button>
-    </div>
-
-    <!--SIGN INN MODAL-->
-    <div id="id01" class="modal">
-      <div class="animate"> <!--class for zoom animation-->
-        <div class="login">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <h1>Login</h1>
-          <form action="authenticate.php" method="POST">
-            <div class="container">
-              <label for="username"><i class="fas fa-user"></i></label>
-              <input type="text" name="username" placeholder="Username" id="username" required>
-              <br>
-              <label for="password"><i class="fas fa-lock"></i></label>
-              <input type="password" name="password" placeholder="Password" id="password" required>
-              
-              <input type="submit" value="Login">
-            </div>
-          </form>
-        </div>
+  <!--SIGN INN MODAL-->
+  <div id="id01" class="modal">
+    <div class="animate"> <!--class for zoom animation-->
+      <div class="login">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <h1>Login</h1>
+        <form action="authenticate.php" method="POST">
+          <div class="container">
+            <label for="username"><i class="fas fa-user"></i></label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <br>
+            <label for="password"><i class="fas fa-lock"></i></label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            
+            <input type="submit" value="Login">
+          </div>
+        </form>
       </div>
     </div>
+  </div>
 
-    <!--SIGN UP MODAL-->
-    <div id="id02" class="modal">
-      <div class="animate"> <!--class for zoom animation-->
-        <div class="sign-up">
-          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <h1>Sign Up</h1>
-          <form action="register.php" method="POST">
-            <div class="container">
-              <label for="username"><i class="fas fa-user"></i></label>
-              <input type="text" name="username" placeholder="Username" id="username" required>
-              <br>
-              <label for="password"><i class="fas fa-lock"></i></label>
-              <input type="password" name="password" placeholder="Password" id="password" required>
-              <br>
-              <label for="email"><i class="fas fa-envelope"></i></label>
-              <input type="email" name="email" placeholder="Email" id="email" required>
-              
-              <input type="submit" value="Register">
-            </div>
-          </form>
-        </div>
+  <!--SIGN UP MODAL-->
+  <div id="id02" class="modal">
+    <div class="animate"> <!--class for zoom animation-->
+      <div class="sign-up">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <h1>Sign Up</h1>
+        <form action="register.php" method="POST">
+          <div class="container">
+            <label for="username"><i class="fas fa-user"></i></label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <br>
+            <label for="password"><i class="fas fa-lock"></i></label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <br>
+            <label for="email"><i class="fas fa-envelope"></i></label>
+            <input type="email" name="email" placeholder="Email" id="email" required>
+            
+            <input type="submit" value="Register">
+          </div>
+        </form>
       </div>
     </div>
+  </div>
 <script src="js/script.js"></script>
 </body>
 </html>

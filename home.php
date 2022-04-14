@@ -19,7 +19,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<nav>
 		<div class="logo-area">
       		<label class="logo"><a href="home.php"><img src="logo/football-logo.png" alt="#"></a></label>
-      		<div class="footyplay">Footyplay</div>
+      		<label class="footyplay"><a href="index.html" style="text-decoration: none; color: white;" >Footyplay</a></label>
     	</div>
 		<input type="checkbox" id="click">
 		<label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>

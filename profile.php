@@ -9,17 +9,17 @@ if (!isset($_SESSION['loggedin'])) {
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
-$DATABASE_NAME = 'phplogin';
+$DATABASE_NAME = 'footyplay_db';
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 // We don't have the password or email info stored in sessions so instead we can get the results from the database.
-$stmt = $con->prepare('SELECT password, email FROM accounts WHERE id = ?');
+$stmt = $con->prepare('SELECT password, email, favTeam FROM accounts WHERE id = ?');
 // In this case we can use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($password, $email);
+$stmt->bind_result($password, $email, $favTeam);
 $stmt->fetch();
 $stmt->close();
 ?>
@@ -36,7 +36,7 @@ $stmt->close();
 		<nav>
 			<div class="logo-area">
       			<label class="logo"><a href="home.php"><img src="logo/football-logo.png" alt="#"></a></label>
-      			<div class="footyplay">Footyplay</div>
+      			<label class="footyplay"><a href="index.html" style="text-decoration: none; color: white;" >Footyplay</a></label>
     		</div>
     		<input type="checkbox" id="click">
     		<label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
@@ -62,6 +62,10 @@ $stmt->close();
 					<tr>
 						<td>Email:</td>
 						<td><?=$email?></td>
+					</tr>
+					<tr>
+						<td>Favorite team:</td>
+						<td><?=$favTeam?></td>
 					</tr>
 				</table>
 			</div>

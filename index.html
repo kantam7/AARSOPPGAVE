@@ -9,7 +9,7 @@
     <link rel="icon" href="logo/football-logo.png">
     <title>Footyplay</title>
 </head>
-<body>
+<body class="indexpage">
   <nav>
     <div class="logo-area" >
       <label class="logo"><a href="index.html"><img src="logo/football-logo.png" alt="#"></a></label>
@@ -62,6 +62,21 @@
             <br>
             <label for="email"><i class="fas fa-envelope"></i></label>
             <input type="email" name="email" placeholder="Email" id="email" required>
+            <br>
+            <label for="favTeam"><i class="fas fa-futbol"></i></label>
+            <select name="favTeam" placeholder="Choose favorite team">
+              <option value="" disabled selected>Choose favorite team</option>
+              <option id="BAY" value="FC Bayern Munich">FC Bayern Munich</option>
+              <option id="LIV" value="Liverpool FC">Liverpool FC</option>
+              <option id="RMA" value="Real Madrid CF">Real Madrid CF</option>
+              <option id="BAR" value="Barcelona FC">Barcelona FC</option>
+              <option id="CITY" value="Manchester CIty FC">Manchester CIty FC</option>
+              <option id="CHE" value="Chelsea FC">Chelsea FC</option>
+              <option id="PSG" value="Paris Saint-Germain FC">Paris Saint-Germain FC</option>
+              <option id="UTD" value="Manchester United FC">Manchester United FC</option>
+              <option id="ARS" value="Arsenal FC">Arsenal FC</option>
+              <option id="ATM" value="Atlètico Madrid">Atlètico Madrid</option>
+            </select>
             
             <input type="submit" value="Register">
           </div>
@@ -69,11 +84,65 @@
       </div>
     </div>
   </div>
-  <div class="flex-container">
 
+  <div id="fs-standings"></div> 
+  <script> 
+  (function (w,d,s,o,f,js,fjs) {
+    w['fsStandingsEmbed']=o;w[o] = w[o] || 
+    function () { 
+      (w[o].q = w[o].q || []).push(arguments) }; 
+      js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; 
+      js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }
+      (window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js')); mw('params', { leagueID: 6135 }); 
+      </script>
+  
+  <div class="image-slideshow">
+		<div>
+	    	<img src="https://via.placeholder.com/600x300" width="1000" height="300" alt="">
+	    	<div>
+	        	<h2>Example Photo 1</h2>
+	            <p>Example description for the photo...</p>
+	        </div>
+	    </div>
+		<div>
+	    	<img src="https://via.placeholder.com/600x300" width="1000" height="300" alt="">
+	        <div>
+	        	<h2>Example Photo 2</h2>
+	            <p>Example description for the photo...</p>
+	        </div>
+	    </div>
+		<div>
+	    	<img src="https://via.placeholder.com/600x300" width="1000" height="300" alt="">
+	        <div>
+	        	<h2>Example Photo 3</h2>
+	            <p>Example description for the photo...</p>
+	        </div>
+	    </div>
+	</div>
+
+  <div class="grid-container">
+    <h3 onclick="document.getElementById('id03').style.display='block'"> Watford vs Arsenal (2-3)</h3>
+    <h3 onclick="document.getElementById('id03').style.display='block'">Watford vs Arsenal (2-3)</h3>
+    <h3 onclick="document.getElementById('id03').style.display='block'"> Watford vs Arsenal (2-3)</h3>
+    <h3 onclick="document.getElementById('id03').style.display='block'">Watford vs Arsenal (2-3)</h3>
   </div>
+
+  <div id="id03" class="modal">
+    <div class="animate"> <!--class for zoom animation-->
+      <div class="modal-videos">
+        <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <h1>HIGHLIGHTS | Watford vs Arsenal (2-3)</h1>
+          <div class="container">
+            <iframe id="video" width="500" height="281" src="https://youtube.com/embed/2Moaw6Q4iRg?rel=0" frameborder="0" allow="fullscreen;"></iframe>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+
 
 <script src="js/script.js"></script>
 </body>
 </html>
+
 

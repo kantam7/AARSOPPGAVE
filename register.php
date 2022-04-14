@@ -3,7 +3,7 @@
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
-$DATABASE_NAME = 'phplogin';
+$DATABASE_NAME = 'footyplay_db';
 // Try and connect using the info above.
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
@@ -47,10 +47,10 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 		echo 'Username exists, please choose another!';
 	} else {
 		// Username doesnt exists, insert new account
-        if ($stmt = $con->prepare('INSERT INTO accounts (username, password, email) VALUES (?, ?, ?)')) {
+        if ($stmt = $con->prepare('INSERT INTO accounts (username, password, email, favTeam) VALUES (?, ?, ?, ?)')) {
         	// We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
         	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        	$stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
+        	$stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $_POST['favTeam']);
         	$stmt->execute();
         	echo 'You have successfully registered, you can now login!';
         } else {

@@ -34,11 +34,14 @@ $stmt->close();
 	</head>
 	<body class="profile">
 		<nav>
-		<label class="logo"><a href="index.html"><img src="logo/football-logo.png" alt="#"></a></label>
-			<div class="logo">Footyplay</div>
+			<div class="logo-area">
+      			<label class="logo"><a href="home.php"><img src="logo/football-logo.png" alt="#"></a></label>
+      			<div class="footyplay">Footyplay</div>
+    		</div>
     		<input type="checkbox" id="click">
     		<label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
 			<ul>
+				<li><a href="home.php"><i class="fas fa-home"></i> Home</a></li>
 				<li><a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a></li>
 				<li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
 			</ul>

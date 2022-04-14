@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="icon" href="logo/football-logo.png">
     <title>Footyplay</title>
 </head>
-<body class="frontpage">
+<body>
   <nav>
-    <label class="logo"><a href="index.html"><img src="logo/football-logo.png" alt="#"></a></label>
-    <div class="footyplay">Footyplay</div>
+    <div class="logo-area" >
+      <label class="logo"><a href="index.html"><img src="logo/football-logo.png" alt="#"></a></label>
+      <label class="footyplay"><a href="index.html" style="text-decoration: none; color: white;" >Footyplay</a></label>
+    </div>
     <input type="checkbox" id="click">
     <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
     <!--Navbar links-->
     <ul>
-       <li><a class="active" href="#">Home</a></li>
-       <li><a href="#">Random</a></li>
+       <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+       <li><a href="#" class="logIn" type="button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> LogIn</a></li>
+       <li><a href="#" class="signUp" type="button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"> SignUp</a></li>
     </ul>
  </nav>
-  <div class="flex-container">
-      <button type="button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><h2>Log in</h2></button>
-      <button type="button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><h2>Sign up</h2></button>
-  </div>
 
   <!--SIGN INN MODAL-->
   <div id="id01" class="modal">
@@ -69,6 +69,10 @@
       </div>
     </div>
   </div>
+  <div class="flex-container">
+
+  </div>
+
 <script src="js/script.js"></script>
 </body>
 </html>

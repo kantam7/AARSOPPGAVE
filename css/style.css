@@ -15,7 +15,7 @@ nav{
   display: flex;
   height: 80px;
   width: 100%;
-  background: #1b1b1b;
+  background: black;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px 0 100px;
@@ -23,7 +23,7 @@ nav{
 }
 /*Navigationbar logo*/
 nav .logo{
-  color: #fff;
+  color: white;
   font-size: 35px;
   font-weight: 600;
 }
@@ -111,7 +111,7 @@ input[type="checkbox"]{
 }
 
 
-/* #################   HOMEPAGE STYLING   ################# */
+/* #################   FORSIDE STYLING   ################# */
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -128,6 +128,10 @@ input[type="checkbox"]{
   flex: 50%;
   margin-right: 15px;
   box-shadow: 0 4px 8px 0 black;
+}
+
+button:hover {
+    opacity: 0.8;
 }
 
 .flex-item-left {
@@ -159,43 +163,10 @@ input[type="checkbox"]{
   }
 }
 
-/*****  LOG INN MODAL STYLING *****/
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/*MODAL BUTTONs Set a style for all buttons */
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
+/*****  MODAL STYLING *****/
 /* Center the image and position the close button */
 .imgcontainer {
-  text-align: center;
+  text-align: right;
   margin: 24px 0 12px 0;
   position: relative;
 }
@@ -206,12 +177,13 @@ img.avatar {
 }
 
 .container {
-  padding: 16px;
+  padding: 50px;
 }
 
 span.psw {
   float: right;
   padding-top: 16px;
+  position: absolute;
 }
 
 /* The Modal (background) */
@@ -228,32 +200,64 @@ span.psw {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+.modal h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+.modal form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+/*Icon styling*/
+.modal form label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  color: #ffffff;
+}
+/*Submit button styling*/
+.modal form input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: black;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.2s;
+}
+.modal form input[type="submit"]:hover {
+background-color: rgb(4, 185, 4);
+  transition: background-color 0.2s;
 }
 
 /* The Close Button (x) */
 .close {
-  position: absolute;
+  position: relative;
   right: 25px;
   top: 0;
+  float: right;
   color: #000;
   font-size: 35px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: red;
   cursor: pointer;
 }
 
-/* Add Zoom Animation */
+/* Add Zoom Animation when opening modal */
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
@@ -263,7 +267,7 @@ span.psw {
   from {-webkit-transform: scale(0)} 
   to {-webkit-transform: scale(1)}
 }
-
+  
 @keyframes animatezoom {
   from {transform: scale(0)} 
   to {transform: scale(1)}
@@ -275,9 +279,83 @@ span.psw {
      display: block;
      float: none;
   }
-  .cancelbtn {
-     width: 100%;
-  }
 }
 
-/*****  SIGN INN MODAL STYLING *****/
+/*****  LOG IN MODAL STYLING *****/
+.login {
+  width: 450px;
+  background-color: #ffffff;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  margin: 100px auto;
+}
+
+.login form input[type="password"], .login form input[type="text"] {
+  width: 300px;
+  height: 50px;
+  border: 1px solid #dee0e4;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+/*****  SIGN UP MODAL STYLING  *****/
+.sign-up {
+  width: 450px;
+  background-color: white;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  margin: 100px auto;
+}
+.sign-up form input[type="password"], .sign-up form input[type="text"], .sign-up form input[type="email"] {
+    width: 300px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+/* #################   HOMEPAGE STYLING   ################# */
+/*Profile and Logout buttons*/
+.navtop div a {
+	padding: 0 20px;
+	text-decoration: none;
+	color: #c1c4c8;
+	font-weight: bold;
+}
+.navtop div a i {
+	padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+	color: #eaebed;
+}
+body.homepage {
+	background-color: #f3f4f7;
+}
+
+.homepage-content {
+	width: 1000px;
+	margin: 0 auto;
+}
+.homepage-content h2 {
+	margin: 0;
+	padding: 25px 0;
+	font-size: 22px;
+	border-bottom: 1px solid #e0e0e3;
+	color: #4a536e;
+}
+.homepage-content > p, .content > div {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 25px;
+	background-color: #fff;
+}
+.homepage-content > p table td, .homepage-content > div table td {
+	padding: 5px;
+}
+.homepage-content > p table td:first-child, .homepage-content > div table td:first-child {
+	font-weight: bold;
+	color: #4a536e;
+	padding-right: 15px;
+}
+.homepage-content > div p {
+	padding: 5px;
+	margin: 0 0 10px 0;
+}

@@ -1,40 +1,22 @@
-
 --
--- Database: `footyplay_db`
+-- Database: `phplogin`
 --
 
-CREATE DATABASE IF NOT EXISTS `footyplay_db` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `footyplay_db`;
+CREATE DATABASE IF NOT EXISTS `phplogin` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `phplogin`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_contact`
+-- Table structure for table `accounts`
 --
 
-DROP TABLE IF EXISTS `tbl_contact`;
-CREATE TABLE `tbl_contact` (
-  `id` int(11) NOT NULL,
-  `fldUsername` varchar(50) NOT NULL,
-  `fldPassword` varchar(50) NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `accounts` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+  	`username` varchar(50) NOT NULL,
+  	`password` varchar(255) NOT NULL,
+  	`email` varchar(100) NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `tbl_contact`
---
-ALTER TABLE `tbl_contact`
- ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `tbl_contact`
---
-ALTER TABLE `tbl_contact`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES (1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com');

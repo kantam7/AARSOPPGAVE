@@ -6,9 +6,9 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
+$DATABASE_HOST = '192.168.5.2';
+$DATABASE_USER = 'admin';
+$DATABASE_PASS = 'admin12345';
 $DATABASE_NAME = 'footyplay_db';
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {

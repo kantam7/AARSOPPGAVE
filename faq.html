@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="icon" href="logo/football-logo.png">
+    <title>Footyplay</title>
+</head>
+<body class="faqpage">
+  <nav>
+    <div class="logo-area" >
+      <label class="logo"><a href="index.html"><img src="logo/football-logo.png" alt="#"></a></label>
+      <label class="footyplay"><a href="index.html" style="text-decoration: none; color: white;" >Footyplay</a></label>
+    </div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <!--Navbar links-->
+    <ul>
+       <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+       <li><a href="#" class="logIn" type="button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> LogIn</a></li>
+       <li><a href="#" class="signUp" type="button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"> SignUp</a></li>
+    </ul>
+ </nav>
+
+  <!--SIGN INN MODAL-->
+  <div id="id01" class="modal">
+    <div class="animate"> <!--class for zoom animation-->
+      <div class="login">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <h1>Login</h1>
+        <form action="authenticate.php" method="POST">
+          <div class="container">
+            <label for="username"><i class="fas fa-user"></i></label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <br>
+            <label for="password"><i class="fas fa-lock"></i></label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            
+            <input type="submit" value="Login">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--SIGN UP MODAL-->
+  <div id="id02" class="modal">
+    <div class="animate"> <!--class for zoom animation-->
+      <div class="sign-up">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <h1>Sign Up</h1>
+        <form action="register.php" method="POST">
+          <div class="container">
+            <label for="username"><i class="fas fa-user"></i></label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <br>
+            <label for="password"><i class="fas fa-lock"></i></label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <br>
+            <label for="email"><i class="fas fa-envelope"></i></label>
+            <input type="email" name="email" placeholder="Email" id="email" required>
+            <br>
+            <label for="favTeam"><i class="fas fa-futbol"></i></label>
+            <select name="favTeam" placeholder="Choose favorite team">
+              <option value="" disabled selected>Choose favorite team</option>
+              <option id="ARS" value="Arsenal FC">Arsenal FC</option>
+              <option id="ATM" value="Atlètico Madrid">Atlètico Madrid</option>
+              <option id="BAR" value="Barcelona FC">Barcelona FC</option>
+              <option id="CHE" value="Chelsea FC">Chelsea FC</option>
+              <option id="BAY" value="FC Bayern Munich">FC Bayern Munich</option>
+              <option id="LIV" value="Liverpool FC">Liverpool FC</option>
+              <option id="CITY" value="Manchester CIty FC">Manchester City FC</option>
+              <option id="UTD" value="Manchester United FC">Manchester United FC</option>
+              <option id="PSG" value="Paris Saint-Germain FC">Paris Saint-Germain FC</option>
+              <option id="RMA" value="Real Madrid CF">Real Madrid CF</option>              
+            </select>
+            
+            <input type="submit" value="Register">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="title">FAQ's</h1>
+  <p class="faq">On this page you will find questions that often occurs while brwosing on our page, we have also given them answers that we hope will make you experience on this page easier.</p>
+  <div class="questions-container">
+    <div class="question">
+        <button>
+            <span>What's the best way to study JavaScript?</span>
+            <i class="fas fa-chevron-down d-arrow"></i>
+        </button>
+        <p>Start With An Online Course.An online tutorial is probably the best way to learn JavaScript.If you're serious about learning fast, efficiently and without missing any important information, then you should consider enrolling in an online course.</p>
+    </div>
+
+    <div class="question">
+        <button>
+            <span>What should I learn after JavaScript / js?</span>
+            <i class="fas fa-chevron-down d-arrow"></i>
+        </button>
+        <p>I suggest taking a look at Typescript and learning some popular frontend framework (Angular, React, Vue). If you are interested in backend, take a look at Node. js.</p>
+    </div>
+
+    <div class="question">
+        <button>
+            <span>Can I get a job after learning JavaScript?</span>
+            <i class="fas fa-chevron-down d-arrow"></i>
+        </button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam ea odit voluptate culpa quas explicabo.</p>
+    </div>
+
+    <div class="question">
+        <button>
+            <span>How long will it take to learn JavaScript?</span>
+            <i class="fas fa-chevron-down d-arrow"></i>
+        </button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus corporis pariatur a maiores minus tempore magni nam beatae dolores omnis.</p>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="row">
+        <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">our services</a></li>
+                <li><a href="privacy_policy.html">privacy policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="reportIssue.html">report issue</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

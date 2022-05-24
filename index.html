@@ -66,16 +66,16 @@
             <label for="favTeam"><i class="fas fa-futbol"></i></label>
             <select name="favTeam" placeholder="Choose favorite team">
               <option value="" disabled selected>Choose favorite team</option>
-              <option id="BAY" value="FC Bayern Munich">FC Bayern Munich</option>
-              <option id="LIV" value="Liverpool FC">Liverpool FC</option>
-              <option id="RMA" value="Real Madrid CF">Real Madrid CF</option>
-              <option id="BAR" value="Barcelona FC">Barcelona FC</option>
-              <option id="CITY" value="Manchester CIty FC">Manchester CIty FC</option>
-              <option id="CHE" value="Chelsea FC">Chelsea FC</option>
-              <option id="PSG" value="Paris Saint-Germain FC">Paris Saint-Germain FC</option>
-              <option id="UTD" value="Manchester United FC">Manchester United FC</option>
               <option id="ARS" value="Arsenal FC">Arsenal FC</option>
               <option id="ATM" value="Atlètico Madrid">Atlètico Madrid</option>
+              <option id="BAR" value="Barcelona FC">Barcelona FC</option>
+              <option id="CHE" value="Chelsea FC">Chelsea FC</option>
+              <option id="BAY" value="FC Bayern Munich">FC Bayern Munich</option>
+              <option id="LIV" value="Liverpool FC">Liverpool FC</option>
+              <option id="CITY" value="Manchester CIty FC">Manchester City FC</option>
+              <option id="UTD" value="Manchester United FC">Manchester United FC</option>
+              <option id="PSG" value="Paris Saint-Germain FC">Paris Saint-Germain FC</option>
+              <option id="RMA" value="Real Madrid CF">Real Madrid CF</option>              
             </select>
             
             <input type="submit" value="Register">
@@ -85,16 +85,7 @@
     </div>
   </div>
 
-  <div id="fs-standings"></div> 
-  <script> 
-  (function (w,d,s,o,f,js,fjs) {
-    w['fsStandingsEmbed']=o;w[o] = w[o] || 
-    function () { 
-      (w[o].q = w[o].q || []).push(arguments) }; 
-      js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; 
-      js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }
-      (window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js')); mw('params', { leagueID: 6135 }); 
-      </script>
+
   
   <div class="image-slideshow">
 		<div>
@@ -121,11 +112,12 @@
 	</div>
 
   <div class="grid-container">
-    <h3 onclick="document.getElementById('id03').style.display='block'"> Watford vs Arsenal (2-3)</h3>
-    <h3 onclick="document.getElementById('id03').style.display='block'">Watford vs Arsenal (2-3)</h3>
-    <h3 onclick="document.getElementById('id03').style.display='block'"> Watford vs Arsenal (2-3)</h3>
-    <h3 onclick="document.getElementById('id03').style.display='block'">Watford vs Arsenal (2-3)</h3>
+    <h3><a href="#" onclick="document.getElementById('id03').style.display='block'"> Watford vs Arsenal (2-3)</a></h3>
+    <h3><a href="#" onclick="document.getElementById('id03').style.display='block'"> Watford vs Arsenal (2-3)</a></h3>
+    <h3><a href="#" onclick="document.getElementById('id03').style.display='block'"> Watford vs Arsenal (2-3)</a></h3>
+    <h3><a href="#" onclick="document.getElementById('id03').style.display='block'"> Watford vs Arsenal (2-3)</a></h3>
   </div>
+
 
   <div id="id03" class="modal">
     <div class="animate"> <!--class for zoom animation-->
@@ -139,8 +131,33 @@
     </div>
   </div>
   
-
-
+  <footer class="footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="privacy_policy.html">privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="reportIssue.html">report issue</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+</footer>
 <script src="js/script.js"></script>
 </body>
 </html>

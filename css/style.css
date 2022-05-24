@@ -6,8 +6,13 @@
   font-family: 'Poppins', sans-serif;
 }
 
-h1{
-  margin-left: 15px;
+.title{
+  font-size: 50px;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-decoration: none;
 }
 
 /*****  NAVIGATIONBAR  *****/
@@ -95,6 +100,7 @@ input[type="checkbox"]{
     text-align: center;
     display: block;
     transition: all 0.3s ease;
+    z-index: 10;
   }
   #click:checked ~ ul{
     left: 0;
@@ -118,6 +124,108 @@ input[type="checkbox"]{
     background: none;
     color: cyan;
   }
+}
+
+/* #################   FOOTER STYLING   ################# */
+.footer {
+  margin-top: 100px;
+
+}
+.footer {
+  background-color: black;
+  height: 250px;
+  padding: 70px 0;
+  line-height: 1.5;
+}
+.footer-center span {
+  margin-right: 1rem;
+}
+
+
+.footer-center a:link,
+.footer-center a:visited {
+  display: block;
+  color: var(--grey2);
+  font-size: 1.4rem;
+  transition: 0.6s;
+}
+
+.footer-center a:hover {
+  color: var(--pink);
+}
+
+.footer-center div {
+  color: var(--grey2);
+  font-size: 1.4rem;
+}
+
+.footer-center h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.footer .row{
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.footer-col {
+  width: 100%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
 }
 
 
@@ -282,7 +390,7 @@ background-color: rgb(4, 185, 4);
 
 /*Video gallery grid layout*/
 .grid-container {
-  width: 80%;
+  width: 1000px;
   margin: auto;
   display: grid;
   grid-template-columns: auto auto;
@@ -290,6 +398,21 @@ background-color: rgb(4, 185, 4);
 }
 .grid-container h3 {
   margin: auto;
+  padding: 20px;
+}
+
+.grid-container a{
+  background-color: black;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.grid-container a:hover, .grid-container a:active {
+  background-color: darkgrey;
+  transition: all 0.3s ease;
 }
 
 /* #################  INDEX FORSIDE STYLING   ################# */
@@ -362,12 +485,12 @@ body.homepage {
 	animation: move 15s ease-in-out 2s infinite alternate;
   display:inline-block;
 }
-.image-slideshow > div div {
-	position: absolute;
+/*.image-slideshow > div div {
+	position: relative;
   bottom: 0;
   background: rgba(0,0,0,0.4);
   width: 100%;
-}
+}*/
 .image-slideshow h2 {
 	padding: 15px;
   margin: 0;
@@ -425,4 +548,111 @@ body.profile {
 .profile nav ul li a:hover{
   color: white;
   background: none;
+}
+
+/* #################  ARSENAL PAGE STYLING   ################# */
+body.arsenal {
+	background-color: #f3f4f7;
+}
+
+.arsenal-content {
+	width: 1000px;
+	margin: 0 auto;
+}
+.arsenal-content h2 {
+	margin: 0;
+	padding: 25px 0;
+	font-size: 22px;
+	border-bottom: 1px solid #e0e0e3;
+	color: #4a536e;
+}
+.arsenal-content > p, .arsenal-content > div {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 25px;
+	background-color: #fff;
+}
+.arsenal-content > p table td, .arsenal-content > div table td {
+	padding: 5px;
+}
+.arsenal-content > p table td:first-child, .arsenal-content > div table td:first-child {
+	font-weight: bold;
+	color: #4a536e;
+	padding-right: 15px;
+}
+.arsenal-content > div p {
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+
+.arsenal nav ul li a.active,
+.arsenal nav ul li a:hover{
+  color: white;
+  background: none;
+}
+
+
+/* #################  FAQ PAGE STYLING   ################# */
+.faq {
+  margin: auto;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+.questions-container{
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.question{
+  border-bottom: 1px solid #fff;
+}
+.question button{
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  border:none;
+  outline: none;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.question p{
+  font-size: 22px;
+  max-height: 0;
+  opacity: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+.d-arrow{
+  transition: transform 0.5s ease-in ;
+  color: #fff;
+}
+
+/*add this class when click*/
+.question p.show{
+  max-height: 200px; 
+  opacity: 1;
+  padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+  transform: rotate(180deg);
+}
+
+/* #################  REPORT ISSUE PAGE STYLING   ################# */
+.report-container {
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  background-color: #e91e63;
+}
+
+.report-container form{
+  display: inline-block;
 }

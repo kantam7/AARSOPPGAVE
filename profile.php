@@ -6,7 +6,7 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
-$DATABASE_HOST = '192.168.5.2';
+$DATABASE_HOST = '192.168.1.2';
 $DATABASE_USER = 'admin';
 $DATABASE_PASS = 'admin12345';
 $DATABASE_NAME = 'footyplay_db';
@@ -31,6 +31,7 @@ $stmt->close();
 		<title>Profile Page</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link rel="icon" href="logo/football-logo.png">
 	</head>
 	<body class="profile">
 		<nav>
@@ -65,10 +66,11 @@ $stmt->close();
 					</tr>
 					<tr>
 						<td>Favorite team:</td>
-						<td><?=$favTeam?></td>
+						<td><?=$favTeam?></td> 
 					</tr>
 				</table>
 			</div>
 		</div>
+		<?php include 'footer.php';?>
 	</body>
 </html>

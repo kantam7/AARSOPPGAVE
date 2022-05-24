@@ -14,6 +14,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<title>Home Page</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<link rel="icon" href="logo/football-logo.png">
 </head>
 <body class="homepage">
 	<nav>
@@ -56,5 +57,16 @@ if (!isset($_SESSION['loggedin'])) {
 	        </div>
 	    </div>
 	</div>
+	<div id="fs-standings"></div> 
+  <script> 
+  (function (w,d,s,o,f,js,fjs) {
+    w['fsStandingsEmbed']=o;w[o] = w[o] || 
+    function () { 
+      (w[o].q = w[o].q || []).push(arguments) }; 
+      js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; 
+      js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }
+      (window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js')); mw('params', { leagueID: 6135 }); 
+      </script>
+	<?php include 'footer.php';?>
 </body>
 </html>

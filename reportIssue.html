@@ -86,39 +86,30 @@
   </div>
 
   <h1 class="title">Report issue</h1>
+
   <div class="report-container">
-    <form action="report.php" method="POST">
-      <label for="issueSubject">Subject of issue: </label>
-      <input id="issueSubject" name="issueSubject" placeholder="Subject" type="text">
-      <br>
-      <label for="issue">Message: </label>
-      <textarea name="issue" id="issue" placeholder="Write your message here"></textarea>
-      <input type="submit" name="submit" value="Submit">
-  </form>
+    <form class="fcf-form-class" method="post" action="report.php">
+        <div class="fcf-form-group">
+            <label for="issueSubject">Subject of issue: </label>
+            <div class="fcf-input-group">
+              <input type="text" id="issueSubject" name="issueSubject" class="fcf-form-control" placeholder="Subject" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+          <label for="issue">Message: </label>
+          <div class="fcf-input-group">
+            <textarea id="issue" name="issue" class="fcf-form-control" rows="6" maxlength="3000" placeholder="Write your message here" required></textarea>
+          </div>
+        </div>
+
+        <div class="fcf-form-group">
+          <button type="submit" name="submit" value="Submit" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+        </div>
+
+    </form>
   </div>
-  form
-  .group
-    input(type="text" required)
-    span.highlight
-    span.bar
-    label Name
-  .group
-    textarea(type="textarea" rows="5" required)
-    span.highlight
-    span.bar
-    label Message
-  .btn-box
-    button.btn.btn-submit(type="submit") submit
 
-  <form action="">
-    <div>
-      <input type="text" required>
-
-    </div>
-  </form>
-
-
-  
   <footer class="footer">
         <div class="row">
             <div class="footer-col">
@@ -126,14 +117,14 @@
                 <ul>
                     <li><a href="#">about us</a></li>
                     <li><a href="#">our services</a></li>
-                    <li><a href="privacy_policy.html">privacy policy</a></li>
+                    <li><a href="">privacy policy</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>get help</h4>
                 <ul>
                     <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="#">report issue</a></li>
+                    <li><a href="reportIssue.html">report issue</a></li>
                 </ul>
             </div>
             <div class="footer-col">

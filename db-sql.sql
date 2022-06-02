@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `favTeam`) VALUES (1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com', 'Manchester United FC');
 
 CREATE TABLE IF NOT EXISTS `reportIssue` (
-	`issueId` int NOT NULL AUTO_INCREMENT,
+	`issueID` int NOT NULL AUTO_INCREMENT,
   	`issueSubject` varchar(50) NOT NULL,
   	`issue` varchar(255) NOT NULL,
     PRIMARY KEY (`issueID`)

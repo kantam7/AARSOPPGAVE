@@ -9,17 +9,6 @@ window.onclick = function(event) {
     }
 }
 
-//
-var container = document.querySelectorAll('[id=video-btn]');
-var container = document.
-
-container.forEach ( a =>{
-    a.addEventListener('click',()=>{
-        const next = a.nextElementSibling;
-        
-        next.document.getElementById('id03').style.display="block"
-    })
-})
 
 /*FAQ dropdown*/
 var buttons = document.querySelectorAll('button');
@@ -50,6 +39,8 @@ for (var i = 0; i < iframes.length; i++){
     var youtube_video_id = iframe_src.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
     //urlArray.push(iframe_src);
     //console.log(urlArray);
+
+    // Running if-test to validate video id before 
     if (youtube_video_id.length == 11) {
         var video_thumbnail = '<img id="imgID" width="420px" height="236px" src="http://img.youtube.com/vi/'+youtube_video_id+'/0.jpg">';
         urlArray.push(video_thumbnail);
